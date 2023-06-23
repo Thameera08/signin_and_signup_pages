@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:signin_and_signup_pages/screens/constants.dart';
 import 'package:signin_and_signup_pages/screens/welcome/welcome_pages.dart';
 
 
@@ -13,7 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Auth',
+      theme: ThemeData(
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: Colors.white
+      ),
       home: Welcome(), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
