@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Body extends StatelessWidget {
-  const Body({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Background();
-  }
-}
-
 class Background extends StatelessWidget {
   final Widget child;
   const Background({
-  Key key,
-  @required this.child,
+  required Key key,
+  required this.child,
     }); super(key: key);
  
 
