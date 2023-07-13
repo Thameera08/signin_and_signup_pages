@@ -14,7 +14,8 @@ class Body extends StatelessWidget {
           Text(
             "Welcome to Train Ride",
             style: TextStyle(fontWeight: FontWeight.bold),
-         )
+         ),
+         SvgPicture.asset("")
         ],
       ),
     );
