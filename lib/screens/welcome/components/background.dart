@@ -3,30 +3,40 @@ import 'package:flutter/material.dart';
 class Background extends StatelessWidget {
   final Widget child;
   const Background({
-  required Key key,
-  required this.child,
-    }); super(key: key);
- 
+    Key? key,
+    required this.child,
+    this.topImage = "assets/images/main_top.png",
+    this.bottomImage = "assets/images/login_bottom.png",
+  }) : super(key: key);
+
+  final String topImage, bottomImage;
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      height: size.height,
-      width: double.infinity,
-      child: Stack(
-        alignment: Alignment.center,
-        children: <Widget>[
-          Positioned(
-            top: 0,
-            left: 0,
-            child: Image.asset(
-              "asset/images/main_top.png",
-              width: size.width * 0.2,
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: Container(
+        width: double.infinity,
+        height: MediaQuery.of(context).size.height,
+        child: Stack(
+          alignment: Alignment.center,
+          children: <Widget>[
+            Positioned(
+              top: 0,
+              left: 0,
+              child: Image.asset(
+                topImage,
+                width: 120,
+              ),
             ),
-          ),
-         // Positioned(child: Image.asset("asset/images/main_bottom.png"))
-        ],
+            // Positioned(
+            //   bottom: 0,
+            //   right: 0,
+            //   child: Image.asset(bottomImage, width: 120),
+            // ),
+            SafeArea(child: child),
+          ],
+        ),
       ),
     );
   }

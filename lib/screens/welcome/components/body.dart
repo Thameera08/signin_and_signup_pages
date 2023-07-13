@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:signin_and_signup_pages/screens/welcome/components/background.dart';
 
 class Body extends StatelessWidget {
