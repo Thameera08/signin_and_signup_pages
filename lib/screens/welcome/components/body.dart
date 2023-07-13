@@ -9,7 +9,13 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Background(
       child: Column(
-        children: <Widget>[Text("Welcome to Train Ride")],
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            "Welcome to Train Ride",
+            style: TextStyle(fontWeight: FontWeight.bold),
+         )
+        ],
       ),
     );
   }
