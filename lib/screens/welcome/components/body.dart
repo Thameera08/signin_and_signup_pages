@@ -15,7 +15,7 @@ class Body extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           SvgPicture.asset(
-            "assets/images/train.svg",
+            "assets/images/chat.svg",
             height: size.height * 0.4, // Adjust the height as needed
           ),
         ],
